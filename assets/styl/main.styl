@@ -1,0 +1,282 @@
+czerwony = #FF0000
+brazowy = #330000
+pomaranczowy = #ff9900
+
+html, body, header, .sto, #myCarousel
+    height 100%
+    font-family 'Ubuntu', sans-serif
+
+h1,h2,h3,h4,h5
+    font-family: 'Josefin Sans', sans-serif;
+
+
+.carousel-control, .carousel-indicators
+    display none
+.carousel-inner, .carousel
+    height 100%
+
+.header_box
+    & > div
+        & > div
+            background rgba(pomaranczowy,0.8)
+        &:nth-of-type(2) > div
+            background rgba(czerwony, 0.8)
+    h1
+        font-size 49px
+        margin-bottom 30px
+        margin-top 30px
+        font-weight 800
+    h2
+        font-size 85px
+        font-weight 700
+    strong
+        font-size 40px
+    span
+        font-size 40px
+
+#mainNav
+    background brazowy
+
+.navbar-default.affix .nav > li>a, .navbar-default.affix .nav>li>a:focus
+    color: rgba(255,255,255,.7);
+
+.about-us
+    margin-top 0px
+    padding-top 10px
+
+    p
+        font-size 22px
+        font-family 'Josefin Sans', sans-serif;
+        strong
+            font-size 27px
+            font-weight 800
+    .home
+        margin-top 50px
+        p
+            color #fff
+            font-size 35px
+            margin-top 140px
+            span
+                font-size 55px
+                font-weight 600
+    .last_box
+        padding-top 100px
+        p
+            text-align center
+        span
+            text-align center
+            strong
+                font-size inherit
+                font-weight 600
+    h2
+        color czerwony
+        font-weight 600
+        text-transform uppercase
+.info_box
+    background rgba(255,255,255,0.8)
+    z-index 99
+    padding 10px
+    margin-top 15%
+    p
+        color brazowy
+        font-size 21px
+        text-align center
+        font-weight 200
+        strong
+            font-size 22px
+            font-weight 500
+
+.main_icon
+    a
+        display block
+        height 100%
+        width 100%
+        position relative
+        .shadow
+            width 100%
+            height 100%
+            will-change background
+            background rgba(255,153,0,0.39)
+            position absolute
+            top 0px
+            left 0px
+            transition all 0.5s ease-in-out
+        h3
+            position absolute
+            top 50%
+            left 50%
+            will-change top
+            transform translate(-50%, -50%)
+            font-weight 600
+            z-index 999
+            color #fff
+            font-size 22px
+            text-align center
+            transition all 0.5s ease-in-out
+        img
+            transition all 0.5s ease-in-out
+        &:hover
+            h3
+                font-size 25px
+.boxx
+    cursor pointer
+
+.title_product
+    width 100%
+    padding 200px 5px 10px 20px
+    position absolute
+    margin-bottom 0px
+    font-size 19px
+    bottom 0px
+    color #fff
+    background linear-gradient(to bottom,transparent 0,rgba(0,0,0,.3) 35%,rgba(0,0,0,.6) 80%,rgba(0,0,0,.8) 100%)
+
+.navbar-collapse
+    .navbar-nav
+        height 100%
+        padding-right 10px
+        li
+            padding 0px
+            a
+                transition all 0.4s ease-in-out
+                padding-top 40px
+                padding-bottom 40px
+                background transparent
+                font-family 'Josefin Sans', sans-serif
+            &:hover
+                background pomaranczowy !important
+        li:last-child
+            margin-left 1px
+            a
+                background czerwony
+.dropdown-menu
+    background transparent
+    box-shadow none
+    border 0px
+    border-bottom 2px solid czerwony
+    padding 0px
+    padding-top 5px
+    min-width 450px
+    & > div
+        background #fff
+        height 100%
+#checkout
+    padding 0px 10px
+    margin-bottom 0px
+    td
+        text-align center
+        vertical-align middle
+        &:nth-of-type(5)
+            background czerwony
+            color #fff
+    tr
+        transition all 0.3s ease-in-out
+        &:hover
+            background czerwony
+            color #fff
+    tfoot
+        tr
+            &:hover
+                background #fff
+                color #000
+                text-weight 600
+.affix
+    .navbar-collapse
+        li
+            a
+                padding-top 15px
+                padding-bottom 15px
+.main_logo
+    img
+        transition all 0.5s ease-in-out
+
+.affix-top
+    .main_logo
+        img
+            height 70px
+.affix
+    .main_logo
+        img
+            height 30px
+            margin-top -3px
+            opacity .7
+.navbar-default .nav > li>a
+    color #fff
+section
+    margin-top 100px
+#product
+    padding-top 0px
+    margin-top 0px
+    .photo
+        text-align center
+        margin 0 auto
+        img
+            text-align center
+            margin 0 auto
+.box_info
+    background czerwony
+    min-height 300px
+    width 100%
+    color #fff
+    h2
+        font-size 60px
+    p
+        font-size 22px
+        font-weight 200
+    a
+        background pomaranczowy
+        padding 10px 25px
+        border-radius 20px
+        color #fff
+        text-transform uppercase
+        font-weight 500
+        &:hover
+            border-radius 5px
+.kwiat
+    .button
+        opacity 0
+        transition all 0.4s ease-in-out
+        position absolute
+        bottom 20px
+        right 25px
+        a
+            color #fff
+            padding 15px 10px
+            border 1px solid #fff
+            border-radius 5px
+            cursor pointer
+            &:hover
+                background rgba(255,153,0,0.5)
+    &:hover
+        .button
+            opacity 1
+.loader
+    position fixed
+    top 40%
+    left 45%
+    width 10%
+    height 200px
+    background red
+    color #fff
+#home
+    display: table
+    height: 300px
+    position: relative
+    width: 100%
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+#onas
+    background url('/assets/img/o_nas.jpg')  center center fixed
+    display table
+    position relative
+    background-size cover
+    p
+        strong
+            font-weight 900
+.flower_big
+    background url('../img/kwiaty_duze.jpg') no-repeat center top
+    width 100%
+    height 600px
+@import 'assets/footer.styl'

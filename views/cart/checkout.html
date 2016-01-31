@@ -1,0 +1,79 @@
+<section>
+    <div class="container">
+       <form method="POST" class="form-horizontal" role="form" novalid>
+           <div class="form-group">
+               <legend>Wpisz swoje dane</legend>
+           </div>
+           <div class="col-md-6">
+               <h4>Dane osoby zamawiającej:</h4>
+               <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Imię:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" ng-model="person.name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Nazwisko:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" ng-model="person.surname">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Adres:</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" ng-model="person.address"></textarea>
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Telefon:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" ng-model="person.phone">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Email:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" ng-model="person.email">
+                    </div>
+                </div>
+           </div>
+           <div class="col-md-6">
+               <h4>Gdzie mamy dostarczyć:</h4>
+               <div class="form-group">
+                   <label for="input" class="col-sm-4 control-label">Dostarcz na mój adres:</label>
+                   <div class="col-sm-8">
+                       <div class="checkbox">
+                           <label>
+                               <input type="checkbox"  ng-model="wlasnyadres" value="">
+
+                           </label>
+                       </div>
+                   </div>
+               </div>
+                <div class="form-group" ng-hide="wlasnyadres">
+                    <label for="input" class="col-sm-4 control-label">Adres odbiorcy:</label>
+                    <div class="col-sm-8">
+                        <textarea class="form-control" ng-model="person.addressSend"></textarea>
+                    </div>
+                </div>
+               <div class="form-group">
+                    <label for="input" class="col-sm-4 control-label">Dopiska na karteczce:</label>
+                    <div class="col-sm-8">
+                        <textarea class="form-control" ng-model="person.description"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="input" class="col-sm-4 control-label">Dodoatkowe dane:</label>
+                    <div class="col-sm-8">
+                        <textarea class="form-control" ng-model="person.another" placeholder="np. godzina dostarczenia, co ma powiedzieć kurier itd."></textarea>
+                    </div>
+                </div>
+           </div>
+           <div class="form-group">
+               <div class="col-sm-3 col-sm-offset-9">
+                   <button ng-click="send(person)" class="btn btn-primary pull-right">Składam zamówienie</button>
+               </div>
+           </div>
+       </form>
+    </div>
+</section>

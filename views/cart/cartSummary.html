@@ -1,0 +1,31 @@
+<div ng-show="itemCount() != 0">
+
+    <table class="table table-condensed table-hover" id="checkout">
+        <tbody>
+            <tr ng-repeat="product in products track by $index">
+                <td>{{$index+1}}</td>
+                <td style="width: 62px;">
+                    <img style="height: 50px;" src="/assets/img/produkt/{{product.photo}}" class="img-responsive" alt="">
+                </td>
+                <td style="text-align: left">{{product.name}}</td>
+                <td><strong>{{product.count}} x {{product.price}} zł</strong></td>
+                <td></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td>
+
+                </td>
+                <td  style="text-align: right; font-weight: 800">Łączna kwota: </td>
+                <td style=" font-weight: 800">{{totalprice() | number: 2}} zł</td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- <div class="row"> -->
+        <!-- <a ng-click="go('/koszyk')" style="background: #fff; border: 1px solid #dadada;" class="btn btn-default btn-xl wow tada pull-right">Przejdz do Koszyka</a> -->
+    <!-- </div> -->
+</div>
+<h4 ng-click="go('/koszyk')" style="font-weight: 300; margin: 0px; padding: 15px; color: #000; cursor: pointer;" ng-hide="itemCount() != 0">W koszyku jeszcze nie ma produktów</h4>

@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="col-md-3">
+        <div class="list-group">
+          <a href="#" class="list-group-item active">
+            Róże
+          </a>
+          <a href="#" class="list-group-item"><span class="badge">14</span> Bukiety</a>
+          <a href="#" class="list-group-item"><span class="badge">4</span> Kosze</a>
+          <a href="#" class="list-group-item"><span class="badge">5</span> Kreator bukietów</a>
+          <a href="#" class="list-group-item"><span class="badge">11</span> Florystyka ślubna</a>
+           <a href="#" class="list-group-item"><span class="badge">14</span> Florystyka żałobna</a>
+          <a href="#" class="list-group-item"><span class="badge">4</span> Opieka nad grobami</a>
+          <a href="#" class="list-group-item"><span class="badge">5</span> Upominki</a>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="row">
+            <div class="col-lg-4 col-sm-6 kwiat wow fadeInDown" data-wow-delay=".{{$index + 1}}s" ng-repeat="kwiat in kwiaty | orderBy: 'id'" style="margin-bottom: 30px">
+                <a href="#/produkt/{{kwiat.id}}" class="portfolio-box">
+                    <img class="img-responsive"  ng-src="/assets/img/produkt/{{kwiat.photo}}" alt="">
+                        <h3 class="title_product">
+                            {{kwiat.name}} <br>
+                            {{kwiat.price}} zł
+                        </h3>
+                    </a>
+                    <div class="button">
+                        <a ng-click="dodaj(kwiat)">DODAJ DO KOSZYKA</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+

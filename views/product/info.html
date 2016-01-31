@@ -1,0 +1,28 @@
+<section id="product">
+        <div class="container">
+            <div class="row">
+               <div class="col-md-6 photo">
+                  <a href="/assets/img/produkt/{{kwiat.photo}}" data-featherlight="image"><img src="/assets/img/produkt/{{kwiat.photo}}" class="img-responsive" alt=""></a>
+               </div>
+               <div class="col-md-6">
+                    <h3>{{kwiat.name}}</h3>
+                    <h5>Kod: R-004</h5>
+                    <p>{{kwiat.description}}</p>
+                    <hr>
+                    <h2>Cena: {{kwiat.price}} zł</h2>
+                    <a ng-click="dodaj(kwiat)" class="btn btn-default pull-right">Dodaj do Koszyka</a>
+                    <hr>
+                  <div class="row">
+                    <div class="col-md-10">
+                      <h4>Dostawa:</h4>
+                      <div class="col-md-2 text-center"><i style="font-size: 30px; text-align: center;" class="fa fa-user"></i></div><div class="col-md-8" style="font-size: 18px"> Bielsko i okolice: <strong>1-3h</strong> </div>
+                      <div class="clearfix" style="margin-bottom: 20px"></div>
+                      <div class="col-md-2 text-center"> <i style="font-size: 30px; text-align: center;" class="fa fa-truck"></i></div><div class="col-md-8" style="font-size: 18px"> Polska: <strong>do 24h</strong> </div>
+                      <div class="clearfix" style="margin-bottom: 20px"></div>
+                      <div class="col-md-2 text-center">  <i style="font-size: 30px; text-align: center;" class="fa fa-plane"></i></div><div class="col-md-8" style="font-size: 18px"> Europa i Świat: <strong>24-48h</strong></div>
+                    </div>
+                  </div>
+               </div>
+            </div>
+        </div>
+    </section>
