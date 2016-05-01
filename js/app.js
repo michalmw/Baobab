@@ -4,7 +4,8 @@ angular
     .module('baobabShop', [
         'ngAnimate',
         'ui.bootstrap',
-        'ngRoute'
+        'ngRoute',
+        'uiGmapgoogle-maps'
     ])
     .constant('link', 'http://baobab.projekty.surprise.design:3333/lista-kwiatow')
     .constant('checkout', 'http://baobab.projekty.surprise.design:2407/b-zamowienia')
@@ -40,11 +41,11 @@ angular
                 })
                 .when('/galeria', {
                     templateUrl: 'views/static/galeria.html',
-                    controller: 'startCtrl'
+                    controller: 'GaleriaCtrl'
                 })
                 .when('/kontakt', {
                     templateUrl: 'views/static/kontakt.html',
-                    controller: 'startCtrl'
+                    controller: 'KontaktCtrl'
                 })
                 .when('/dodaj-kwiat', {
                     templateUrl: 'views/tmp/dodaj.html',
@@ -52,23 +53,17 @@ angular
                 })
                 .when('/sposob-platnosci', {
                     templateUrl: 'views/static/sposob-platnosci.html',
-                    controller: 'startCtrl'
+                    controller: 'sposobPlatnosciCtrl'
                 });
 
     }).run(function($location, $rootScope) {
-        $rootScope.go = function (path) {
-              $location.path(path);
-        };
-        $rootScope.myInterval = 5000;
-        $rootScope.noWrapSlides = false;
-        var slides = $rootScope.slides = [
-                {
-                    image: "/assets/img/wys.jpg",
-                    text: ""
-                }
-            ];
+        
+        // $rootScope.go = function (path) {
+        //       $location.path(path);
+        // };
+            
     }).config(['$httpProvider',function ($httpProvider) {
 
-        $httpProvider.defaults.useXDomain = true;
-        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+        // $httpProvider.defaults.useXDomain = true;
+        // delete $httpProvider.defaults.headers.common['X-Requested-With'];
 }]) ;

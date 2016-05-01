@@ -6,10 +6,24 @@ html, body, header, .sto, #myCarousel
     height 100%
     font-family 'Ubuntu', sans-serif
 
+#myCarousel
+    background url('../img/glowna.jpg')
+
+
 h1,h2,h3,h4,h5
     font-family: 'Josefin Sans', sans-serif;
 
-
+.title-offer
+    margin-bottom 30px
+.badge
+    background brazowy
+.label-default
+    padding 10px
+    margin-right 25px
+    background brazowy
+.main-subcategory
+    padding-bottom 20px
+    margin-top 5px
 .carousel-control, .carousel-indicators
     display none
 .carousel-inner, .carousel
@@ -77,6 +91,9 @@ h1,h2,h3,h4,h5
     z-index 99
     padding 10px
     margin-top 15%
+    h1
+        color brazowy
+        text-align center        
     p
         color brazowy
         font-size 21px
@@ -85,6 +102,22 @@ h1,h2,h3,h4,h5
         strong
             font-size 22px
             font-weight 500
+.nag
+    background rgba(255,255,255,0.8)
+    z-index 99
+    padding 10px
+    margin-top 15%
+    h1
+        color brazowy
+        text-align center 
+          
+.buttonSend:hover
+    background pomaranczowy
+    
+.adres
+    p
+        margin-bottom 0px
+                           
 
 .main_icon
     a
@@ -279,4 +312,64 @@ section
     background url('../img/kwiaty_duze.jpg') no-repeat center top
     width 100%
     height 600px
+
+// li.ng-enter {
+//     -webkit-transition: 1s;
+//     transition: 1s;
+//     opacity: 0;
+// }
+// li.ng-enter-active {
+//     opacity: 1;
+// }
+// .ng-leave {
+//   -webkit-transition: all 1s ease-in-out;
+//   transition: all 1s ease-in-out;
+//   opacity: 1;
+
+// }
+
+.ng-leave-active {
+  opacity: 0;
+}
+
+#map_canvas
+    height 500px
+    width 100%
+    margin 0px
+    position relative
+    
+.angular-google-map-container 
+    position absolute
+    top 0
+    bottom 0
+    right 0
+    left 0
+   
+.white-shadow
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0px; left: 0px;
+    background: linear-gradient(to bottom,transparent 0,transparent 50%,rgba(255,255,255,0.5) 70%, rgba(255,255,255,0.95) 90%, rgba(255,255,255,1) 100%);
+    
+.fade {
+    opacity: 1;
+}
+.fade.ng-enter,
+.fade.ng-leave {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.fade.ng-enter {
+    opacity: 0;
+}
+.fade.ng-enter-active {
+    opacity: 1;
+}
+.fade.ng-leave {
+    opacity: 1;
+}
+.fade.ng-leave-active {
+    opacity: 0;
+}
 @import 'assets/footer.styl'

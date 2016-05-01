@@ -6,8 +6,11 @@ var FlowerSchema = new Schema({
     name: String,
     price: Number,
     description: String,
-    photo: String
-
+    photo: String,
+    category: String
+    // subcategory: [{
+    //     name: String
+    // }]
 });
 // FlowerSchema.pre('save', function(next) {
     // var user = this;

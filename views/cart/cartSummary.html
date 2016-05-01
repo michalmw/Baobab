@@ -1,3 +1,13 @@
+<header style="height: 100%;">
+    <div id="myCarousel" >
+         <div class="container header_box" style="padding-top: 10%;  z-index: 9999;">
+            <div class="col-md-6 col-md-offset-6 nag wow fadeInDown" >
+                               <h1>Twój koszyk</h1>
+                        </div>
+        </div>
+    </div>
+</header>
+<div class="white-shadow"></div>
 <div ng-show="itemCount() != 0">
 
     <table class="table table-condensed table-hover" id="checkout">
@@ -5,7 +15,7 @@
             <tr ng-repeat="product in products track by $index">
                 <td>{{$index+1}}</td>
                 <td style="width: 62px;">
-                    <img style="height: 50px;" src="/assets/img/produkt/{{product.photo}}" class="img-responsive" alt="">
+                    <img style="height: 50px;" src="assets/img/produkt/{{product.photo}}" class="img-responsive" alt="">
                 </td>
                 <td style="text-align: left">{{product.name}}</td>
                 <td><strong>{{product.count}} x {{product.price}} zł</strong></td>

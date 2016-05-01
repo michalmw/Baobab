@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 
 var Flower = require('./server/models/flower');
 var app = express();
-
+//http://baobab.projekty.surprise.design:3333/lista-kwiatow
 
 mongoose.connect('mongodb://ibuu:qwe123@ds047945.mongolab.com:47945/baobab', function(err) {
    if(err) {
@@ -27,19 +27,17 @@ app.all('/*', function(req, res, next) {
   next();
 });
 app.get('/', function(req,res) {
-
     res.log('home');
 });
 
 app.post('/dodaj-kwiata', function(req,res, next) {
 
     var flower = new Flower();
-
     flower.name = req.body.name;
     flower.price = req.body.price;
     flower.description = req.body.description;
     flower.photo = req.body.photo;
-    // res.json(flower);
+    flower.category = req.body.category;
     flower.save(function(err) {
         // if (err) return next(err);
         res.json('Poprawnioe dodano ;-)');
@@ -66,5 +64,5 @@ app.post('/lista-kwiatow/:id', function(req, res) {
 app.listen(3333, function(err) {
 
     if(err) throw err;
-    console.log('Server running on port 3000');
+    console.log('Server running on port 3333');
 });

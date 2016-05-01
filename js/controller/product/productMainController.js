@@ -2,9 +2,8 @@
 
 angular
     .module('baobabShop')
-    .controller('productMainCtrl', function($scope, $routeParams, link, $http, cart, $location) {
-
-        $location.hash('myCarousel');
+    .controller('productMainCtrl', function($scope, $routeParams, link, $http, cart, $location,$rootScope) {
+                             $("html, body").animate({ scrollTop: "250px" });
 
         $http
             .post(link + '/' + $routeParams.id)

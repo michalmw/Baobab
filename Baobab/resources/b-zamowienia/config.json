@@ -1,0 +1,77 @@
+{
+	"type": "Collection",
+	"properties": {
+		"name": {
+			"name": "name",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "name",
+			"order": 0
+		},
+		"surname": {
+			"name": "surname",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "surname",
+			"order": 1
+		},
+		"email": {
+			"name": "email",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "email",
+			"order": 2
+		},
+		"phone": {
+			"name": "phone",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "phone",
+			"order": 3
+		},
+		"address": {
+			"name": "address",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "address",
+			"order": 4
+		},
+		"addressSend": {
+			"name": "addressSend",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "addressSend",
+			"order": 5
+		},
+		"description": {
+			"name": "description",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "description",
+			"order": 6
+		},
+		"another": {
+			"name": "another",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "another",
+			"order": 7
+		},
+		"products": {
+			"name": "products",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "products",
+			"order": 8
+		}
+	}
+}

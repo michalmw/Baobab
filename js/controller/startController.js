@@ -2,7 +2,12 @@
 
 angular
     .module('baobabShop')
-    .controller('startCtrl', function($scope, $http, link, cart, $rootScope) {
+    .controller('startCtrl', function($scope, $http, link, cart, $rootScope,$location) {
+
+
+    $("html, body").animate({ scrollTop: "0px" }, 0);
+
+
 
 
         $scope.hide = function(pos) {
@@ -18,7 +23,7 @@ angular
 
         };
 
-        $rootScope.main = true;
+        
         $http
             .get(link)
             .then(function(data) {

@@ -12,8 +12,5 @@
     "gulp": "^3.9.0",
     "gulp-stylus": "^2.1.0",
     "rupture": "^0.6.1"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.10.0"
   }
 }

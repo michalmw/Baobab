@@ -1,23 +1,41 @@
+<header style="height: 100%;">
+    <div id="myCarousel" >
+         <div class="container header_box" style="padding-top: 10%;  z-index: 9999;">
+            <div class="col-md-6 col-md-offset-6 nag wow fadeInDown" >
+                               <h1>Lista produktów</h1>
+                        </div>
+        </div>
+    </div>
+</header>
+<div class="white-shadow"></div>
 <div class="container">
     <div class="col-md-3">
         <div class="list-group">
-          <a href="#" class="list-group-item active">
+          <a ng-click="info('Róże')" class="list-group-item "><span class="badge">{{(subcategory|filter:'Róże').length}}</span>
             Róże
           </a>
-          <a href="#" class="list-group-item"><span class="badge">14</span> Bukiety</a>
-          <a href="#" class="list-group-item"><span class="badge">4</span> Kosze</a>
-          <a href="#" class="list-group-item"><span class="badge">5</span> Kreator bukietów</a>
-          <a href="#" class="list-group-item"><span class="badge">11</span> Florystyka ślubna</a>
-           <a href="#" class="list-group-item"><span class="badge">14</span> Florystyka żałobna</a>
-          <a href="#" class="list-group-item"><span class="badge">4</span> Opieka nad grobami</a>
-          <a href="#" class="list-group-item"><span class="badge">5</span> Upominki</a>
+          <a ng-click="info('Bukiety')"  class="list-group-item"><span class="badge">{{(subcategory|filter:'Bukiety').length}}</span> Bukiety</a>
+          <a ng-click="info('Kosze')"  class="list-group-item"><span class="badge">{{(subcategory|filter:'Kosze').length}}</span> Kosze</a>
+          <a ng-click="info('Kreator bukietów')"  class="list-group-item"><span class="badge">{{(subcategory|filter:'Kreator bukietów').length}}</span> Kreator bukietów</a>
+          <a ng-click="info('Florystyka ślubna')"  class="list-group-item"><span class="badge">{{(subcategory|filter:'Florystyka ślubna').length}}</span> Florystyka ślubna</a>
+          <a ng-click="info('Florystyka żałobna')" class="list-group-item"><span class="badge">{{(subcategory|filter:'Florystyka żałobna').length}}</span> Florystyka żałobna</a>
+          <a ng-click="info('Opieka nad grobami')" class="list-group-item"><span class="badge">{{(subcategory|filter:'Opieka nad grobami').length}}</span> Opieka nad grobami</a>
+          <a ng-click="info('Upominki')" class="list-group-item"><span class="badge">{{(subcategory|filter:'Upominki').length}}</span> Upominki</a>
         </div>
     </div>
+    <script>
+
+    </script>
     <div class="col-md-9">
         <div class="row">
-            <div class="col-lg-4 col-sm-6 kwiat wow fadeInDown" data-wow-delay=".{{$index + 1}}s" ng-repeat="kwiat in kwiaty | orderBy: 'id'" style="margin-bottom: 30px">
-                <a href="#/produkt/{{kwiat.id}}" class="portfolio-box">
-                    <img class="img-responsive"  ng-src="/assets/img/produkt/{{kwiat.photo}}" alt="">
+            <ul class="col-md-12 main-subcategory" ng-show="subshow">
+               <li ng-repeat="cat in subcategory | filter: test" class="label label-default ">{{cat.name}}</li>
+            </ul>
+            <div class="clearfix"></div>
+            <ul class="list-unstyled" >
+            <li  class="col-lg-4 col-sm-6 kwiat fade" ng-repeat="kwiat in kwiaty | orderBy: 'id' | filter: test"  style="margin-bottom: 30px">
+                <a href="#/produkt/{{kwiat._id}}" class="portfolio-box">
+                    <img class="img-responsive"  ng-src="assets/img/produkt/{{kwiat.photo}}" alt="">
                         <h3 class="title_product">
                             {{kwiat.name}} <br>
                             {{kwiat.price}} zł
@@ -26,7 +44,8 @@
                     <div class="button">
                         <a ng-click="dodaj(kwiat)">DODAJ DO KOSZYKA</a>
                     </div>
-            </div>
+            </li>
+            </ul>
         </div>
     </div>
 </div>
