@@ -1,22 +1,23 @@
 <section>
 <div class="container">
     <h3>Podsumowanie koszyka</h3>
-    {{products}}
     <table class="table table-hover">
         <thead>
             <tr>
                 <th class="col-md-1">L.p.</th>
-                <th class="col-md-7">Nazwa</th>
+                <th class="col-md-5">Nazwa</th>
                 <th class="col-md-2">Ilość</th>
                 <th class="col-md-2">Cena</th>
+                <th class="col-md-2">Usuń</th>
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="product in products track by $index">
+            <tr ng-repeat="product in productssss track by $index">
                 <td>{{$index + 1}}</td>
                 <td>{{product.name}}</td>
                 <td>{{product.count}}</td>
                 <td>{{product.price}}</td>
+                <td><button class="btn btn-danger btn-xs" ng-click="deleteProduct(product.name)">USUŃ</button></td>
             </tr>
         </tbody>
     </table>

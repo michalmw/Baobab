@@ -3,6 +3,7 @@
 angular
     .module('baobabShop', [
         'ngAnimate',
+        'ngCookies',
         'ui.bootstrap',
         'ngRoute',
         'uiGmapgoogle-maps'
@@ -61,6 +62,7 @@ angular
         // $rootScope.go = function (path) {
         //       $location.path(path);
         // };
+        $rootScope.change = 1;
             
     }).config(['$httpProvider',function ($httpProvider) {
 

@@ -9,7 +9,7 @@ angular
             controller: function ($scope) {
 
                 var cartData = cart.getProducts();
-                $scope.products = cart.getProducts();
+                $scope.products = cartData;
 
                 $scope.total = function() {
 
@@ -47,21 +47,26 @@ angular
         return {
 
             template: '<span>{{number()}}</span>',
-            controller: function($scope) {
+            controller: function($scope, $cookies, cart, $rootScope) {
 
-                 var cartData = cart.getProducts();
+                  $scope.$watch(function(){
+            
+                           return $rootScope.change;
+                            
+                    }, function(v){
+                        
+                        var tmp = cart.getProducts();
+                             $scope.number = function() {
+                                var total = 0;
 
-                $scope.number = function() {
-                    var total = 0;
+                                for(var i = 0; i < tmp.length; i++) {
+                                    total += tmp[i].count;
+                                }
+                                return total;
 
-                    for(var i = 0; i < cartData.length; i++) {
-                        total += cartData[i].count;
-
-                    }
-
-                    return total;
-
-                };
+                            };
+                    });
+               
             }
         }
     });

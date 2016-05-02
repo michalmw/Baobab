@@ -31,9 +31,13 @@ angular
                 $scope.kwiaty = data.data;
             });
 
-
+            function asd() {
+                console.log('as');
+            }
         $scope.dodaj = function(item) {
 
             cart.addProduct(item.id, item.name, item.price, item.photo);
+            
+            console.log('oobj:', cart.getProducts());
         };
     });
