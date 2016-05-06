@@ -48,6 +48,10 @@ angular
                     templateUrl: 'views/static/kontakt.html',
                     controller: 'KontaktCtrl'
                 })
+                .when('/kreator-kwiatow', {
+                    templateUrl: 'views/static/kreator-kwiatow.html',
+                    controller: 'KreatorKwiatowCtrl'
+                })
                 .when('/dodaj-kwiat', {
                     templateUrl: 'views/tmp/dodaj.html',
                     controller: 'dodajCtrl'

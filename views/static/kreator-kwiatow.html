@@ -1,0 +1,264 @@
+<header style="height: 100%;">
+    <div id="myCarousel" >
+         <div class="container header_box" style="padding-top: 10%;  z-index: 9999;">
+            <div class="col-md-6 col-md-offset-6 nag wow fadeInDown" >
+                               <h1>Kreator Bukietów</h1>
+                        </div>
+        </div>
+    </div>
+</header>
+<div class="white-shadow"></div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-8 col-md-offset-2">
+                <form ng-submit="sendRoze(kwiat)">
+                    <div class="form-group">
+                        <label for="input" class="col-sm-4 control-label">Termin dostawy:</label>
+                        <div class="col-sm-8">
+                            <input type="date" name="" id="input" class="form-control" >
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="input" class="col-sm-4 control-label">Ilość róż:</label>
+                        <div class="col-sm-8">
+                            <input type="number" min="5" value="5" name="" id="input" class="form-control" >
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="input" class="col-sm-4 control-label">Wybierz długość:</label>
+                        <div class="col-sm-8">
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="dlugosc" id="input" value="" checked="checked">
+                                    średnia 50-60 cm
+                                </label>
+                            </div>
+                             <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="dlugosc" id="input" value="" >
+                                    długa 80-90 cm
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="input" class="col-sm-4 control-label">Wybierz kolor:</label>
+                        <div class="col-sm-8">
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="kolor" id="input" value="" checked="checked">
+                                    czerwony
+                                </label>
+                            </div>
+                             <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="kolor" id="input" value="" >
+                                    biały
+                                </label>
+                            </div>
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="kolor" id="input" value="" >
+                                    żółty
+                                </label>
+                            </div>
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="kolor" id="input" value="" >
+                                    herbaciany
+                                </label>
+                            </div>
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="kolor" id="input" value="" >
+                                    różowy
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="input" class="col-sm-4 control-label">Wybierz sposób ułożenia:</label>
+                        <div class="col-sm-8">
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="ulozenie" id="input" value="" checked="checked">
+                                    na okrągło
+                                </label>
+                            </div>
+                             <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="ulozenie" id="input" value="" >
+                                    stopniowo
+                                </label>
+                            </div>
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="ulozenie" id="input" value="" >
+                                    w koszu
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="input" class="col-sm-4 control-label">Wybierz dekoracje:</label>
+                        <div class="col-sm-8">
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="dekoracja" id="input" value="" checked="checked">
+                                    brak
+                                </label>
+                            </div>
+                             <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="dekoracja" id="input" value="" >
+                                    delikatna
+                                </label>
+                            </div>
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="dekoracja" id="input" value="" >
+                                    bogata
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="input" class="col-sm-4 control-label">Wybierz sposób ułożenia:</label>
+                        <div class="col-sm-8">
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="ulozenie" id="input" value="" checked="checked">
+                                    na okrągło
+                                </label>
+                            </div>
+                             <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="ulozenie" id="input" value="" >
+                                    stopniowo
+                                </label>
+                            </div>
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="ulozenie" id="input" value="" >
+                                    w koszu
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="input" class="col-sm-4 control-label">Dołącz do róż:</label>
+                        <div class="col-sm-8">
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="checkbox" name="ulozenie" id="input" value="" >
+                                    czekoladowe serce (+50,90 zł)
+                                </label>
+                            </div>
+                             <div class="radio-inline">
+                                <label>
+                                    <input type="checkbox" name="ulozenie" id="input" value="" >
+                                    pluszowy miś (+49,90 zł)
+                                </label>
+                            </div>
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="checkbox" name="ulozenie" id="input" value="" >
+                                    ptasie mleczko (+20,90 zł)
+                                </label>
+                            </div>
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="checkbox" name="ulozenie" id="input" value="" >
+                                    kawa delikatesowa (+25,90 zł)
+                                </label>
+                            </div>
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="checkbox" name="ulozenie" id="input" value="" >
+                                    bombonierka (+25,90 zł)
+                                </label>
+                            </div>
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="checkbox" name="ulozenie" id="input" value="" >
+                                    wazon (+40,90 zł)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="" class="col-sm-4 control-label">Dołącz do róż swoją wiadomość:</label>
+                        <div class="col-sm-8">
+                            <textarea name="" id="input" class="form-control" rows="3" required="required"></textarea>
+                        </div>
+                    </div>
+                    <div class="pull-right">
+                        <input type="text" ng-model="pokazCeneRoz" class="form-control">
+                    </div>
+                    <hr>
+                    <button class="btn-success pull-right">Zatwierdzam</button>
+                </form> 
+                <form ng-submit="sendTulipany(tulipan)">
+                    <div class="form-group">
+                        <label for="input" class="col-sm-4 control-label">Termin dostawy:</label>
+                        <div class="col-sm-8">
+                            <input type="date" name="" id="input" class="form-control" >
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="input" class="col-sm-4 control-label">Ilość tulipanów:</label>
+                        <div class="col-sm-8">
+                            <input type="number" min="5" value="5" name="" id="input" class="form-control" >
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="input" class="col-sm-4 control-label">Wybierz kolor:</label>
+                        <div class="col-sm-8">
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="kolor" id="input" value="" checked="checked">
+                                    czerwony
+                                </label>
+                            </div>
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="kolor" id="input" value="" >
+                                    żółty
+                                </label>
+                            </div>
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="kolor" id="input" value="" >
+                                    biały/kremowy
+                                </label>
+                            </div>
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="kolor" id="input" value="" >
+                                    wielokolorowy
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pull-right">
+                        <input type="text" ng-model="pokazCeneTulipanow" class="form-control">
+                    </div>
+                    <hr>
+                    <button class="btn-success pull-right">Zatwierdzam</button>
+
+                </form> 
+            </div>
+        </div>
+    </div>
